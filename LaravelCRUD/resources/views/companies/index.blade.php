@@ -28,7 +28,7 @@
             <th>Company Name</th>
             <th>Company Email</th>
             <th>Company Address</th>
-            <th>Phone Phone</th>
+            <th>Company Phone</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($companies as $company)
