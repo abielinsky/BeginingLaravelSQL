@@ -52,6 +52,17 @@
                     @enderror
                 </div>
             </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Phone:</strong>
+                    <input type="text" name="phone" class="form-control" placeholder="Phone">
+                    @error('phone')
+                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
             <button type="submit" class="btn btn-primary ml-3">Submit</button>
         </div>
     </form>

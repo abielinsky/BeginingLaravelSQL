@@ -34,12 +34,14 @@ class CompanyCRUDController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required',
-            'address' => 'required'
+            'address' => 'required',
+            'phone' => 'required'
         ]);
         $company = new Company;
         $company->name = $request->name;
         $company->email = $request->email;
         $company->address = $request->address;
+        $company->phone = $request->phone;
         $company->save();
         return redirect()->route('companies.index')
             ->with('success','Company has been created successfully.');
@@ -77,11 +79,13 @@ class CompanyCRUDController extends Controller
             'name' => 'required',
             'email' => 'required',
             'address' => 'required',
+            'phone' => 'required',
         ]);
         $company = Company::find($id);
         $company->name = $request->name;
         $company->email = $request->email;
         $company->address = $request->address;
+        $company->phone = $request->phone;
         $company->save();
         return redirect()->route('companies.index')
             ->with('success','Company Has Been updated successfully');
